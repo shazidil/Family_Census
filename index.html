@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>Dashboard </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -15,38 +17,32 @@
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+
 </head>
 <body>
 
-<div id="header-placeholder"></div>
-<div id="nav-placeholder"></div>
+  <main id="main" class="main">
 
-<main id="main" class="main">
-  <span><u><h3>Important Details to Remember When Entering Data</u></span></h3>
-  <li><i>When <b>text data unavailable </b>under a particular section - Enter data as <b>NA</i></b><br></li>
-  <li><i>When <b>numerical data unavailable</b> under particular section - Enter data as <b>0</i></b><br></li>
-  <li><i>NIC - Final alphabet using <b>CAPITAL</b><br></li>
+<span><u><h3>Important Details to Remember When Entering Data</u></span></h3>
+<li><i>When <b>text data unavailable </b>under a particular section - Enter data as <b>NA</i></b><br></li>
+<li><i>When <b>numerical data unavailable</b> under particular section - Enter data as <b>0</i></b><br></li>
+<li><i>NIC - Final alpahabet using <b>CAPITAL</b><br></li>
   <li>Don't enter the same data repeatedly </li>
-</main><!-- End #main -->
 
-<div id="footer-placeholder"></div>
-
-<script>
-  function loadHTML(file, elementId) {
-    fetch(file)
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById(elementId).innerHTML = data;
-      })
-      .catch(error => console.log('Error:', error));
-  }
-
-  loadHTML('header.html', 'header-placeholder');
-  loadHTML('nav.html', 'nav-placeholder');
-  loadHTML('footer.html', 'footer-placeholder');
+<!-- <a href="Inser_data.php">
+        <img alt="Qries" src="">
+</a> -->
+  </main><!-- End #main -->
+  <script>
+    document.getElementById("header").innerHTML = fetch('header.html').then(response => response.text());
+    document.getElementById("footer").innerHTML = fetch('footer.html').then(response => response.text());
 </script>
-
+ 
 </body>
 </html>
+
