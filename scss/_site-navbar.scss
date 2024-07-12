@@ -3,12 +3,8 @@
 	position: relative;
 }
 .logo {
-	font-size: 24px;
-	color: $white;
-	font-weight: 700;
-	&:hover {
-		color: $white;
-	}
+	display: block;
+    margin-right: auto; /* Adjust margin for spacing */
 }
 .site-nav {
 	position: absolute;
