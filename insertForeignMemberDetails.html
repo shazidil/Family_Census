@@ -1,0 +1,243 @@
+<!-- /*
+* Template Name: Tour
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Family Census Management System</title>
+</head>
+
+<body>
+
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav">
+		<div class="container">
+			<div class="site-navigation">
+				<a href="index.html" class="logo m-0">
+					<img src="favicon.png" alt="Logo" >
+				</a>
+				
+
+				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+					<li ><a href="index.html">Home</a></li>
+					<!-- <li class="has-children">
+						<a href="#">Dropdown</a>
+						<ul class="dropdown">
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#">Menu One</a></li>
+							<li class="has-children">
+								<a href="#">Menu Two</a>
+								<ul class="dropdown">
+									<li><a href="#">Sub Menu One</a></li>
+									<li><a href="#">Sub Menu Two</a></li>
+									<li><a href="#">Sub Menu Three</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Menu Three</a></li>
+						</ul>
+					</li> -->
+					<li><a href="view.html">View Data</a></li>
+					<li class="active"><a href="insert.html">Insert Data</a></li>
+					
+					<li><a href="contact.html">Update Data</a></li>
+					<li><a href="contact.html">Delete Data</a></li>
+				</ul>
+
+				<a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+					<span></span>
+				</a>
+
+			</div>
+		</div>
+	</nav>
+
+<div></div>
+	<div class="hero">
+			<div class="row align-items-center">
+				
+			</div>
+		</div>
+	</div>
+
+<!-- body -->
+	<div>
+    <center><h1>Retired and Sspecial Need Member Details</h1></center>  
+	<main id="main" class="main">
+		<div class="pagetitle">
+			
+		  </div>
+		  
+		  <section class="section">
+			<div class="card">
+			  <div class="card-body"><h5 class="card-title" >Retired Member Details</h5>
+				<form method="POST" action="RetSpcl_detail_insert.php"  class="mb-4" >
+					
+				<div class="col-md-6" class="form-outline mb-4">
+					<label class="form-label" for="form3Example3" >House Number</label>
+				  <input type="text" class="form-control form-outline mb-4" placeholder="Home Number" name="House_No" required>
+				</div>
+				<br class="form-outline mb-4">
+			   <div class="col-md-10">
+					  <table class="table table-bordered table-hover" id="tab_logic_meals">
+						<thead>
+							<tr >
+								<th class="text-center">Full_Name</th>
+								<th class="text-center">Retired Allowance Number</th>
+								<th class="text-center">Type</th>
+							</tr>
+						</thead>
+						<tbody id="table_body">
+						  <tr>
+							<td><input  name='Ret_Name' placeholder='Name' class="form-control" required></td>
+							<td><input  name='Ret_AllowanceNu' placeholder='Retired Allowance Number' class="form-control" required></td>
+							<!-- <td>
+								Civil  <input  type="radio" name="Ret_Type#" value="Civil">
+								Widow<input  type="radio" name="Ret_Type" value="Widow">
+								ask<input type="radio" name="Ret_Type"  value="ask">
+								Military<input  type="radio" name="Ret_Type" value="Military">
+							</td> -->
+							<td>
+							  <select name="Ret_Type" required>
+							   <!-- option tag starts -->
+								   <option>Select</option>
+								   <option value="Civil">Civil</option>
+								   <option value="Widow">Widow</option>
+								   <option value="ask">ask</option>
+								   <option value="Military">Military</option>
+							   <!-- option tag ends -->
+							   </select>
+							</td>
+						  </tr>
+						</tbody>
+	  
+					</table>
+					</div>
+				</form>
+				
+			  </div>
+			  <div class="button_submit ">
+				<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button><br>
+			 </div>
+			</div>
+			
+		  </section>
+	  <br>
+		  <section class="section">
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="card-title">Special Need Member Details</h5>
+				<form  method="POST" action="SpclMem_detail_insert.php">
+				
+	  
+				<div class="col-md-6" class="form-outline mb-4">
+					<label class="form-label" for="form3Example3" >House Number</label>
+				  <input type="text" class="form-control form-outline mb-4" placeholder="Home Number" name="House_No" required>
+				</div>
+					  <table class="table table-bordered table-hover" id="tab_logic_meals" >
+						  <tr >
+							<th class="text-center">Name</th>
+							<td><input name='SPmem_Name' placeholder='Name' class="form-control"/></td>
+						  </tr>
+						  <tr >
+							<th class="text-center">Disability </th>
+							<td><input name='SPmem_Disability' placeholder='Disability ' class="form-control"/></td>
+						  </tr>
+						  <tr >
+							<th class="text-center">Disability Allowance</th>
+							<td>
+							  <div>  <input type="radio" id="SPmem_DisAllowance" name="SPmem_DisAllowance" value="Gain"> Allowance- Gain </div>
+							  <div>  <input type="radio" id="SPmem_DisAllowance" name="SPmem_DisAllowance" value="Not Gained"> Allowance - Not Gained </div>
+							</td>
+						  </tr>
+					</table>
+					
+				</form>
+			  </div>
+			  <div class="button_submit ">
+				<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button><br>
+			 </div>
+			</div>
+		  </section>
+	  </main>
+
+  </div>
+<!-- end of body -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/daterangepicker.js"></script>
+
+	<script src="js/typed.js"></script>
+	<script>
+		$(function() {
+			var slides = $('.slides'),
+			images = slides.find('img');
+
+			images.each(function(i) {
+				$(this).attr('data-id', i + 1);
+			})
+
+			var typed = new Typed('.typed-words', {
+				strings: ["San Francisco."," Paris."," New Zealand.", " Maui.", " London."],
+				typeSpeed: 80,
+				backSpeed: 80,
+				backDelay: 4000,
+				startDelay: 1000,
+				loop: true,
+				showCursor: true,
+				preStringTyped: (arrayPos, self) => {
+					arrayPos++;
+					console.log(arrayPos);
+					$('.slides img').removeClass('active');
+					$('.slides img[data-id="'+arrayPos+'"]').addClass('active');
+				}
+
+			});
+		})
+	</script>
+
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>
