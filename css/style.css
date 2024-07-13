@@ -550,7 +550,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .hero {
   padding: 1rem 0 5rem 0;
   background: #6998AB;
-  margin-bottom: 100px; }
+  margin-bottom: 20px; }
   .hero.hero-inner {
     padding: 1rem 0 5rem 0;
     margin-bottom: auto;
