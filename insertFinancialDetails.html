@@ -95,108 +95,123 @@
 
 <!-- body -->
 	<div>
-    <center><h1>Actors/Special Talented Member Details </h1></center>  
+    <center><h1>Financial Details </h1></center>  
 	<main id="main" class="main">
 		<div class="pagetitle">
-		  <h1></h1>
 		</div>
 		<section class="section">
 		  <div class="card">
 			<div class="card-body">
-				<h5 class="card-title">Actors/Special Talented Member Details</h5>
-			  <form method="POST" action="act_skill_insert.php" >
+				<h5 class="card-title">Monthly Expenses</h5>
+	
+			  <form   method="POST" action="finance_insert.php">
 				<div class="col-md-6" class="form-outline mb-4">
 					<label class="form-label" for="form3Example3" >House Number</label>
-				  <input type="text" class="form-control form-outline mb-4" placeholder="House Number" name="House_No" required>
+				  <input type="text" class="form-control form-outline mb-4" placeholder="Home Number" name="House_No" required>
 				</div>
-				<table class="table table-bordered table-hover" id="Actors_Special">
+				<div class="col-md-10">
+				
+				<table class="table table-bordered table-hover form-outline mb-4" id="tab_logic_meals">
+	
 					  <thead >
 						  <tr >
-							<th class="text-center">Name</th>
-							<th class="text-center">Talent </th>
-						  </tr>
-					  </thead >
-					  <tbody id="table_body">
+							  <th class="text-center">Food</th>
+							  <th class="text-center">Medical</th>
+							  <th class="text-center">Education </th>
+							  <th class="text-center">Other</th>
+							</tr>
+					  </thead>
+					  <tbody>
+						<td>
+						<input type="number" min="0" name='ME_Food' placeholder='Food' class="form-control" required>
+						</td>
+						<td>
+						<input type="number" min="0" name='ME_Medical' placeholder='Medical' class="form-control" required>
+						</td>
+						<td>
+						<input type="number" min="0" name='ME_Education' placeholder='Education' class="form-control" required>
+						</td>
+						<td>
+						<input type="number" min="0" name='ME_Other' placeholder='Other' class="form-control" required>
+						</td>
+					</tbody>
+				  </table> 
+	
+				  <h5 class="card-title">Samurdhi</h5>
+					<div class="col-md-15">
+					  <table class="table table-bordered table-hover form-outline mb-4" id="tab_logic_meals">
 						<tr >
-						  <td><input  name='Actors_ST_Name' placeholder='Name' class="form-control" required></td>
-						  <td><input  name='Actors_ST_Talent' placeholder='Talent ' class="form-control" required></td>
+						  <th class="text-center">Yes</th>
+						  <td><center><input type="radio"  name="S_eligibility" value="Yes"></center></td>
 						</tr>
-					  </tbody>
+						<tr >
+						  <th class="text-center">No</th>
+						  <td><center><input type="radio"  name="S_eligibility" value="No"></center></td>
+						</tr>
+						<tr >
+						  <th class="text-center">Card Number</th>
+						  <td><input name='S_CardNu' placeholder='Card Number' class="form-control"/></td>
+						</tr>
+						<tr >
+						<th class="text-center">Value</th>
+						<td><input  type="number" min="0" name='S_Value' placeholder='Value' class="form-control"/></td>
+					  </tr>
 				  </table>
-			  </form>
-			</div>
-			<div class="button_submit ">
-				<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button><br>
-			 </div>
-		  </div>
-		</section>
-		<br>
-		<section class="section">
-		  <div class="card">
-			<div class="card-body">
-				<h5 class="card-title"> Animal Husbandry</h5>
-			  <form  method="POST" action="animal_det_insert.php">
-				
-				<div class="col-md-6" class="form-outline mb-4">
-					<label class="form-label" for="form3Example3" >House Number</label>
-				  <input type="text" class="form-control form-outline mb-4" placeholder="House Number" name="House_No" required>
-				</div>
-						  <table class="table table-bordered table-hover" id="Animal_Husbandry">
-							  <thead >
-								<tr >
-									<th class="text-center">Type of Animal </th>
-									<th class="text-center">Quantity  </th>
-								</tr>
-							  </thead >
-							  <tbody id="table_body1">
-								<tr >
-									<td><input name='Animal_Type' placeholder='Type of Animal ' class="form-control" required></td>
-									<td><input type="number" min="0" name='Animal_Quant' placeholder='Quantity' class="form-control" required></td>
-								</tr>
-								</tbody>
-							</table>
-						  </div>
-						  
-					  <div class="button_submit ">
-						<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button><br>
-					 </div>
-						</form>
-					  </div>
-					</div>
-				  </section>
-				  <br>
-				  <section class="section">
-					<div class="card">
-					  <div class="card-body">
-						<h5 class="card-title"> Severe Diseased People</h5>
-						<form  method="POST" action="desiases_det_insert.php">
-							<div class="col-md-6" class="form-outline mb-4">
-								<label class="form-label" for="form3Example3" >House Number</label>
-							  <input type="text" class="form-control form-outline mb-4" placeholder="House Number" name="House_No" required>
-							</div>
-							
-							
-							  <table class="table table-bordered table-hover" id="Severe_Diseased">
-								<thead >
-								<tr >
-								  <th class="text-center">Name  </th>
-								  <th class="text-center">Disease   </th>
-								</tr>
-							  </thead >
-							<tbody id="table_body2">
-								<tr >
-								  <td><input  name='DiseasedPer_Name' placeholder='Name ' class="form-control" required></td>
-								  <td><input  name='DiseasedPer_Disease' placeholder='Disease   ' class="form-control" required></td>
-								</tr>
-								</tbody>
-					  </table>
-				  </form>
-				</div>
-				<div class="button_submit ">
+	
+				  <h5 class="card-title">Public Fund / Medical Beneficiary </h5>
+					<div class="col-md-15">
+					  <table class="table table-bordered table-hover form-outline mb-4" id="tab_logic_meals">
+						<tr >
+						  <th class="text-center">Card Number </th>
+						  <td><input name='Fund_CardNu' placeholder='Card Number' class="form-control"></td>
+						</tr>
+						<tr >
+						  <th class="text-center">Value </th>
+						<td><input type="number" min="0" name='Fund_Value' placeholder='Value' class="form-control"></td>
+						</tr>
+						<tr >
+						  <th class="text-center">Benefitting Person Name </th>
+						<td><input  name='Fund_Name' placeholder='Name' class="form-control"></td>
+						</tr>
+						<tr >
+						<th class="text-center">Disease</th>
+						<td><input  name='Fund_Disease' placeholder='Disease' class="form-control"></td>
+					  </tr>
+				  </table>
+	
+				  <h5 class="card-title">Fund Benefitting Senior Citizen</h5>
+					<div class="col-md-15">
+					  <table class="table table-bordered table-hover" id="tab_logic_meals">
+						<tr >
+						  <th class="text-center">Card Number </th>
+						  <td><input  name='SenrCtzn_CardNu' placeholder='Card Number' class="form-control"/></td>
+						</tr>
+						<tr >
+						  <th class="text-center">Value </th>
+						  <td><input  name='SenrCtzn_Value' placeholder='Value' class="form-control"/></td>
+						</tr>
+						<tr >
+						  <th class="text-center">Benefitting Person Name </th>
+						  <td><input  name='SenrCtzn_Name' placeholder='Name' class="form-control"/></td>
+						</tr>
+						<tr >
+						<th class="text-center">Guardian </th>
+						<td><input  name='SenrCtzn_Guardian' placeholder='Guardian' class="form-control"/></td>
+					  </tr>
+					  
+				  </table>
+				  <div class="button_submit" >
 					<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button><br>
 				 </div>
-			  </div>
-			</section>
+				</div>
+				  
+			  </form>
+			  
+			</div>
+			
+		  </div>
+		  
+		</section>
 			<!-- end of land detils  -->
 		</main>
 
