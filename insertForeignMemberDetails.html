@@ -95,101 +95,58 @@
 
 <!-- body -->
 	<div>
-    <center><h1>Retired and Sspecial Need Member Details</h1></center>  
+    <center><h1>Members living in Overseas</h1></center>  
 	<main id="main" class="main">
 		<div class="pagetitle">
-			
 		  </div>
-		  
-		  <section class="section">
-			<div class="card">
-			  <div class="card-body"><h5 class="card-title" >Retired Member Details</h5>
-				<form method="POST" action="RetSpcl_detail_insert.php"  class="mb-4" >
-					
-				<div class="col-md-6" class="form-outline mb-4">
-					<label class="form-label" for="form3Example3" >House Number</label>
-				  <input type="text" class="form-control form-outline mb-4" placeholder="Home Number" name="House_No" required>
-				</div>
-				<br class="form-outline mb-4">
-			   <div class="col-md-10">
-					  <table class="table table-bordered table-hover" id="tab_logic_meals">
-						<thead>
-							<tr >
-								<th class="text-center">Full_Name</th>
-								<th class="text-center">Retired Allowance Number</th>
-								<th class="text-center">Type</th>
-							</tr>
-						</thead>
-						<tbody id="table_body">
-						  <tr>
-							<td><input  name='Ret_Name' placeholder='Name' class="form-control" required></td>
-							<td><input  name='Ret_AllowanceNu' placeholder='Retired Allowance Number' class="form-control" required></td>
-							<!-- <td>
-								Civil  <input  type="radio" name="Ret_Type#" value="Civil">
-								Widow<input  type="radio" name="Ret_Type" value="Widow">
-								ask<input type="radio" name="Ret_Type"  value="ask">
-								Military<input  type="radio" name="Ret_Type" value="Military">
-							</td> -->
-							<td>
-							  <select name="Ret_Type" required>
-							   <!-- option tag starts -->
-								   <option>Select</option>
-								   <option value="Civil">Civil</option>
-								   <option value="Widow">Widow</option>
-								   <option value="ask">ask</option>
-								   <option value="Military">Military</option>
-							   <!-- option tag ends -->
-							   </select>
-							</td>
-						  </tr>
-						</tbody>
-	  
-					</table>
-					</div>
-				</form>
-				
-			  </div>
-			  <div class="button_submit ">
-				<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button><br>
-			 </div>
-			</div>
-			
-		  </section>
-	  <br>
 		  <section class="section">
 			<div class="card">
 			  <div class="card-body">
-				<h5 class="card-title">Special Need Member Details</h5>
-				<form  method="POST" action="SpclMem_detail_insert.php">
 				
+				<h5 class="card-title">Overseas Member Details</h5>
+				<form class="row g-3" method="POST" action="Foreign_det_insert.php" >
 	  
 				<div class="col-md-6" class="form-outline mb-4">
 					<label class="form-label" for="form3Example3" >House Number</label>
 				  <input type="text" class="form-control form-outline mb-4" placeholder="Home Number" name="House_No" required>
 				</div>
-					  <table class="table table-bordered table-hover" id="tab_logic_meals" >
+					  <table class="table table-bordered table-hover" id="tab_logic_meals">
 						  <tr >
 							<th class="text-center">Name</th>
-							<td><input name='SPmem_Name' placeholder='Name' class="form-control"/></td>
+							<td><input type="text" name='Omem_Name' placeholder='Name' class="form-control" required></td>
 						  </tr>
 						  <tr >
-							<th class="text-center">Disability </th>
-							<td><input name='SPmem_Disability' placeholder='Disability ' class="form-control"/></td>
+							<th class="text-center">Country</th>
+							<td><input type="text" name='Omem_Country' placeholder='Country' class="form-control" required></td>
 						  </tr>
 						  <tr >
-							<th class="text-center">Disability Allowance</th>
-							<td>
-							  <div>  <input type="radio" id="SPmem_DisAllowance" name="SPmem_DisAllowance" value="Gain"> Allowance- Gain </div>
-							  <div>  <input type="radio" id="SPmem_DisAllowance" name="SPmem_DisAllowance" value="Not Gained"> Allowance - Not Gained </div>
+							<th class="text-center">Reason</th>
+							<td >
+							  Employment <input type="checkbox" id="Employment" name="Omem_Reason[]" value="Employment" >
+							  Education <input type="checkbox" id="Education" name="Omem_Reason[]" value="Education">
+							  Other<input type="checkbox" id="Other" name="Omem_Reason[]" value="Other">
 							</td>
 						  </tr>
+						  <tr >
+							<th class="text-center">Passport Number</th>
+							<td><input type="text" name='Omem_PassportNu' placeholder='Passport Number' class="form-control" required></td>
+						  </tr>
+						  <tr >
+							<th class="text-center">Posts-Holders</th>
+							<td>
+							  <input type="text" name='OPosts_Holders_Name' placeholder='Name' class="form-control" required>
+							  <input type="text" name='OPosts_Holders_Position' placeholder='Position' class="form-control" required>
+							</td>
+	  
+						  </tr>
 					</table>
-					
+				  </div>
+				  <div class="button_submit ">
+					<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button><br>
+				 </div>
 				</form>
 			  </div>
-			  <div class="button_submit ">
-				<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button><br>
-			 </div>
+			  
 			</div>
 		  </section>
 	  </main>
