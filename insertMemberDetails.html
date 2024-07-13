@@ -53,13 +53,12 @@
 				
 
 				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-					<li class="active"><a >Home</a></li>
-					<li class="has-children">
-						<a href="#">Insert Data</a>
+					<li ><a href="index.html">Home</a></li>
+					<!-- <li class="has-children">
+						<a href="#">Dropdown</a>
 						<ul class="dropdown">
-							<li><a href="insertGeneral.html">General Data</a></li>
-							<li><a href="insertMemberDetails.html">Member Details</a></li>
-							<!-- <li><a href="#">Menu One</a></li>
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#">Menu One</a></li>
 							<li class="has-children">
 								<a href="#">Menu Two</a>
 								<ul class="dropdown">
@@ -68,11 +67,11 @@
 									<li><a href="#">Sub Menu Three</a></li>
 								</ul>
 							</li>
-							<li><a href="#">Menu Three</a></li> -->
+							<li><a href="#">Menu Three</a></li>
 						</ul>
-					</li>
+					</li> -->
 					<li><a href="view.html">View Data</a></li>
-					
+					<li class="active"><a href="insert.html">Insert Data</a></li>
 					
 					<li><a href="contact.html">Update Data</a></li>
 					<li><a href="contact.html">Delete Data</a></li>
@@ -88,67 +87,85 @@
 
 <div></div>
 	<div class="hero">
-		<div class="container">
 			<div class="row align-items-center">
 				
 			</div>
 		</div>
 	</div>
 
+<!-- body -->
+	<div>
+    <center><h1>General House Details</h1></center>  
+<main id="main" class="main">
+  
+  
+  <section class="section">
+        <div class="card">
+          <div class="card-body">
 
-	<div class="site-footer">
-		<div class="inner first">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
-						
-						<div class="widget">
-							<ul class="list-unstyled social">
-								<li><a href="https://www.instagram.com/dcs_srilanka/"><span class="icon-instagram"></span></a></li>
-								<li><a href="https://web.facebook.com/DCS.SriLanka/?_rdc=1&_rdr"><span class="icon-facebook"></span></a></li>
-								<li><a href="https://www.linkedin.com/"><span class="icon-linkedin"></span></a></li>
-								
-							</ul>
-						</div>
-					</div>
-					
-					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
-						<div class="widget">
-							<h3 class="heading">Contact</h3>
-							<ul class="list-unstyled quick-info links">
-								<li class="email"><a href="#">information@statistics.gov.lk</a></li>
-								<li class="phone"><a href="#">+94 11 2147000</a></li>
-								<li class="address"><a href="#">1109-Bothalapitiya</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+           <form method="POST" action="gen_det.php" class="col">
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3" >House Number</label>
+                  <input  name="Home_number"  placeholder="Home Number" class="form-control mb-2" required >
+                
+                  <label class="form-label" for="form3Example3" >Tax Number</label>
+                  <input type="text" class="form-control" placeholder="Tax Number" name="Tax_number">
+                </div>
 
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3" >Address</label>
+                  <input class="form-control" placeholder="Address" name="Address" required>
+                </div>
 
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3">Telephone</label>
+                  <div class="row">
+                      <div class="col">
+                        <input type="text" class="form-control mb-2" placeholder="Fixed" name="Fixed">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Mobile" name="Mobile">
+                      </div>
+                  </div>
+                </div>
 
-		<div class="inner dark">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
-						<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. 
-							All Rights Reserved.
-						</p>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3">Social Media</label>
+                  <div class="row">
+                      <div class="col">
+                          <input type="text" class="form-control" placeholder="WhatsApp" name="wapp">
+                      </div>
+                      <div class="col">
+                          <input type="text" class="form-control" placeholder="Telegram" name="tele">
+                      </div>
+                  </div>
+                </div>
+              
+                <div data-mdb-input-init class="form-outline mb-4">
+                  
+                  <div class="row">
+                      <div class="col">
+                        <label class="form-label" for="form3Example3">Email</label>
+                        <input type="text" class="form-control" placeholder="email" name="email">
+                      </div>
+                      <div class="col">
+                        <label class="form-label" for="form3Example3" >Number of Sub Families</label>
+                        <input type="text" class="form-control" placeholder="Input in Digits" name="sub_families">
+                      </div>
+                  </div>
+                </div>
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Submit</button>
+            </form>
+          </div>
+        </div>
+        </section>
 
-	<div id="overlayer"></div>
-	<div class="loader">
-		<div class="spinner-border" role="status">
-			<span class="sr-only">Loading...</span>
-		</div>
-	</div>
+<!-- end of general house details  -->
 
+</main>
+
+  </div>
+<!-- end of body -->
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
