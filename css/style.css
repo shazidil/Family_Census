@@ -1384,3 +1384,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       content: "\f095"; }
     .site-footer ul.quick-info li.address:before {
       content: "\e8b4"; }
+
+      .form_member {
+        display: flex;
+        justify-content: center;
+        gap: 5px; /* Adjust the space between the sections */
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+      }
+
+      .section {
+        flex: 1;
+        min-width: 500px; /* Minimum width to handle responsiveness */
+      }
