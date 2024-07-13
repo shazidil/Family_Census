@@ -1,0 +1,407 @@
+<!-- /*
+* Template Name: Tour
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Family Census Management System</title>
+</head>
+
+<body>
+
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav">
+		<div class="container">
+			<div class="site-navigation">
+				<a href="index.html" class="logo m-0">
+					<img src="favicon.png" alt="Logo" >
+				</a>
+				
+
+				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+					<li ><a href="index.html">Home</a></li>
+					<!-- <li class="has-children">
+						<a href="#">Dropdown</a>
+						<ul class="dropdown">
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#">Menu One</a></li>
+							<li class="has-children">
+								<a href="#">Menu Two</a>
+								<ul class="dropdown">
+									<li><a href="#">Sub Menu One</a></li>
+									<li><a href="#">Sub Menu Two</a></li>
+									<li><a href="#">Sub Menu Three</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Menu Three</a></li>
+						</ul>
+					</li> -->
+					<li><a href="view.html">View Data</a></li>
+					<li class="active"><a href="insert.html">Insert Data</a></li>
+					
+					<li><a href="contact.html">Update Data</a></li>
+					<li><a href="contact.html">Delete Data</a></li>
+				</ul>
+
+				<a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+					<span></span>
+				</a>
+
+			</div>
+		</div>
+	</nav>
+
+<div></div>
+	<div class="hero">
+			<div class="row align-items-center">
+				
+			</div>
+		</div>
+	</div>
+
+<!-- body -->
+	<div>
+    <center><h1>Land and House Structure Details</h1></center>  
+	<main id="main" class="main">
+		<div class="pagetitle">
+		  <h3>Land Details</h3>
+		</div>
+		<section class="section">
+		  <div class="card">
+			<div class="card-body">
+			  <form class="row g-3" method="POST" action="land_insert.php">
+				<div data-mdb-input-init class="form-outline mb-4">
+					<label class="form-label" for="form3Example3" >House Number</label>
+					<input  name="Home_number"  placeholder="House Number" class="form-control" required>
+				  </div>
+	
+					<table class="table table-bordered table-hover " id="tab_logic_meals">
+					  <thead>
+						  <tr class="">
+							<th class="text-center">Land Ownership</th>
+							<th class="text-center">Land Size</th>
+							<th class="text-center">Deed Details</th>
+							<th class="text-center">Details of any other Lands</th>
+						  </tr>
+					  </thead>
+					  <tbody>
+						  <tr>
+							<td><center>
+							  <select class="col-md-8" name="L_Ownership">
+								<option>Select</option>
+								<option value="Government">Government</option>
+								<option value="Railway Dep">Railway Dep</option>
+								<option value="Urban Council">Urban Council</option>
+								<option value="Personal">Personal</option>
+								<option value="Illegal">Illegal</option>
+									 <!-- option tag ends -->
+							  </select></center>
+							</td>
+							<td>
+							  <p><input type="number" name='L_Size'min="0" placeholder='Size in Amount' class="form-control" size="1"/>  </p>
+	
+								  <p>
+									<select name="LSize_Unit">
+									   <option>Unit</option>
+									   <option value="Acres">Acres</option>
+									   <option value="Rud">Rud</option>
+									   <option value="Purches">Purches</option>
+									</select>
+								  </p>
+	
+								</td>
+								<td>
+								  <p><input type="text" name='Deed_Number' placeholder='Deed Number' class="form-control" required> </p>
+								  <p><input type="text" name='Deed_CNo' placeholder='Ownership Certificate Number' class="form-control"/> </p>
+								  <p><input type="text" name='Deed_Ownership' placeholder='Land Owner Name ' class="form-control"/> </p>
+								</td>
+								<td>
+								  <p><input type="text" name='other_L_location' placeholder='Location' class="form-control"/> </p> </p>
+								  <p><input type="number" min="0" name='other_L_Size' placeholder='Size' class="form-control"/> </p>
+								  <p>
+									<select name="other_L_Unit">
+									   <option>Unit</option>
+									   <option value="Acres">Acres</option>
+									   <option value="Rud">Rud</option>
+									   <option value="Purches">Purches</option>
+									</select>
+								  </p>
+								  <p><input type="text" name='other_L_Ownership' placeholder='Land Owner Name' class="form-control"/> </p>
+								</td>
+							</tr>
+						</tbody>
+					  </table>
+					  <div class="button_submit" >
+						<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button>
+					 </div>
+					</form>
+				  </div>
+				  </div>
+				  </section>
+
+				  <div></div>
+				<!-- end of land detils  -->
+				<div class="pagetitle">
+				  <h3>House Structure Details </h3>
+				</div>
+				<section class="section">
+				  <div class="card">
+					<div class="card-body">
+					  <form class="row g-3" method="POST" action="house_det.php">
+						<div>
+							<h5 class="card-title">Details Regarding the Structure of the House</h5><br>
+						</div>
+						<div data-mdb-input-init class="form-outline mb-4">
+							<label class="form-label" for="form3Example3" >House Number</label>
+							<input  name="House_No"  placeholder="House Number" class="form-control" required>
+						  </div>
+	
+						<div>
+						  
+						</div>
+	
+							<table class="table table-bordered table-hover" id="tab_logic_meals">
+								  <thead>
+									  <tr >
+										  <th class="text-center">Structure of the house</th>
+										  <th class="text-center">Roofs of the house</th>
+										  <th class="text-center">Walls of the house</th>
+										  <th class="text-center">Floor of the house</th>
+										  <th class="text-center">Ownership of the house</th>
+										</tr>
+								  </thead>
+								  <tbody>
+									  <tr id='meals0'>
+										<td><center>
+										  <select class="col-md-8" name="H_Structure">
+											 <!-- option tag starts -->
+												 <option>Select</option>
+												 <option value="One floor">One floor</option>
+												 <option value="Two floors">Two floors</option>
+												 <option value="Three floors">Three floors</option>
+												 <option value="Temporary">Temporary</option>
+											 <!-- option tag ends -->
+											 </select></center>
+										  </td>
+										  <td><center>
+											<select class="col-md-8" name="H_Roofs">
+											 <!-- option tag starts -->
+												 <option>Select</option>
+												 <option value="Asbestos">Asbestos</option>
+												 <option value="Amano">Amano</option>
+												 <option value="Tin">Tin</option>
+												 <option value="Concrete">Concrete</option>
+												 <option value="Other">Other</option>
+											 <!-- option tag ends -->
+											 </select></center>
+										  </td>
+										  <td><center>
+											<select class="col-md-8" name="H_Walls">
+											 <!-- option tag starts -->
+												 <option>Select</option>
+												 <option value="Block">Block </option>
+												 <option value="Stone">Stone </option>
+												 <option value="Brick">Brick </option>
+												 <option value="Wood">Wood</option>
+												 <option value="Polythene">Polythene </option>
+												 <option value="Mud">Mud</option>
+											 <!-- option tag ends -->
+											 </select></center>
+										  </td>
+										  <td><center>
+											<select class="col-md-8" name="H_Floor">
+											 <!-- option tag starts -->
+												 <option>Select</option>
+												 <option value="Cement">Cement </option>
+												 <option value="Tile">Tile </option>
+												 <option value="Concrete">Concrete </option>
+												 <option value="Mud">Mud </option>
+												 <option value="Other">Other</option>
+											 <!-- option tag ends -->
+											 </select></center>
+										  </td>
+										  <td><center>
+											<select class="col-md-8" name="H_Ownership">
+											 <!-- option tag starts -->
+												 <option>Select</option>
+												 <option value="Self">Self </option>
+												 <option value="Rent">Rent </option>
+												 <option value="Shared">Shared</option>
+												 <option value="Tax">Tax</option>
+												 <option value="Relative">Relative </option>
+												 <option value="Other">Other </option>
+											 <!-- option tag ends -->
+											 </select></center>
+										  </td>
+									  </tr>
+								</tbody>
+							  </table>
+	
+					<!-- end of house details -->
+	
+						  <h5 class="card-title">Facilities in the House</h5>
+	
+							  <table class="table table-bordered table-hover" id="tab_logic_meals">
+									<thead>
+										<tr >
+											<th class="text-center">Water Facility / Supply</th>
+											<th class="text-center">Power Supply Available</th>
+											<th class="text-center">Medium of Cooking </th>
+											<th class="text-center">Available Toilet System</th>
+											<th class="text-center">Media Usage</th>
+										  </tr>
+									</thead>
+									<tbody>
+										<tr id='meals0'>
+										  <td><center>
+											<select class="col-md-8" name="H_Water">
+											   <!-- option tag starts -->
+												   <option>Select</option>
+												   <option value="Tap Water">Tap Water</option>
+												   <option value="Well in the Garden">Well in the Garden</option>
+												   <option value="Tube well">Tube well</option>
+												   <option value="Public tube well">Public tube well</option>
+												   <option value="No water Supply">No water Supply </option>
+											   <!-- option tag ends -->
+											   </select></center>
+											</td>
+											<td><center>
+											  <select class="col-md-8" name="H_Power">
+											   <!-- option tag starts -->
+												   <option>Select</option>
+												   <option value="Yes">Yes </option>
+												   <option value="No">No </option>
+											   <!-- option tag ends -->
+											   </select></center>
+											</td>
+	
+											  <td><center>
+												<select class="col-md-8" name="H_Cooking">
+											   <!-- option tag starts -->
+												   <option>Select</option>
+												   <option value="Wood">Wood </option>
+												   <option value="Gas">Gas </option>
+												   <option value="Electric">Electric  </option>
+												   <option value="Wood">Wood</option>
+												   <option value="Keresoine">Keresoine  </option>
+											   <!-- option tag ends -->
+											   </select></center>
+											</td>
+											<td><center>
+											  <select class="col-md-8" name="H_Toilet">
+											   <!-- option tag starts -->
+												   <option>Select</option>
+												   <option value="Squatting Pan">Squatting Pan </option>
+												   <option value="Commode">Commode </option>
+												   <option value="Pit toilets">Pit toilets  </option>
+												   <option value="Temporary">Temporary  </option>
+												   <option value="No toilet Facility">No toilet Facility </option>
+											   <!-- option tag ends -->
+											   </select></center>
+											</td>
+											<td><center>
+											  <select class="col-md-8" name="H_Media">
+											   <!-- option tag starts -->
+												   <option>Select</option>
+												   <option value="Television">Television  </option>
+												   <option value="Radio">Radio  </option>
+												   <option value="Internet">Internet </option>
+												   <option value="Computer">Computer </option>
+											   <!-- option tag ends -->
+											   </select></center>
+											</td>
+										</tr>
+								  </tbody>
+								</table>
+	
+					  <!-- end of facility details -->
+					  <div class="button_submit" >
+						<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" >Submit</button>
+					 </div>
+					</form>
+				  </div>
+				  </div>
+				  </section>
+	  </main>
+
+  </div>
+<!-- end of body -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/daterangepicker.js"></script>
+
+	<script src="js/typed.js"></script>
+	<script>
+		$(function() {
+			var slides = $('.slides'),
+			images = slides.find('img');
+
+			images.each(function(i) {
+				$(this).attr('data-id', i + 1);
+			})
+
+			var typed = new Typed('.typed-words', {
+				strings: ["San Francisco."," Paris."," New Zealand.", " Maui.", " London."],
+				typeSpeed: 80,
+				backSpeed: 80,
+				backDelay: 4000,
+				startDelay: 1000,
+				loop: true,
+				showCursor: true,
+				preStringTyped: (arrayPos, self) => {
+					arrayPos++;
+					console.log(arrayPos);
+					$('.slides img').removeClass('active');
+					$('.slides img[data-id="'+arrayPos+'"]').addClass('active');
+				}
+
+			});
+		})
+	</script>
+
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>

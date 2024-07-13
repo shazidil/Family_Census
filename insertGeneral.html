@@ -103,7 +103,7 @@
         <div class="card">
           <div class="card-body">
 
-           <form method="POST" action="gen_det.php" class="col">
+           <form method="POST" action="gen_det.php" >
                 <div data-mdb-input-init class="form-outline mb-4">
                   <label class="form-label" for="form3Example3" >House Number</label>
                   <input  name="Home_number"  placeholder="Home Number" class="form-control mb-2" required >
@@ -154,7 +154,9 @@
                       </div>
                   </div>
                 </div>
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Submit</button>
+                <div class="button_submit" class="row g-3">
+					<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block col-md-3" >Submit</button>
+				 </div>
             </form>
           </div>
         </div>

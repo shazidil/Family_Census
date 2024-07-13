@@ -1396,3 +1396,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         flex: 1;
         min-width: 500px; /* Minimum width to handle responsiveness */
       }
+      .button_submit {
+        display: block;
+        margin: 0 auto; /* This will center the button horizontally */
+        /* Add any other styles you need */
+    }
+    
+      

@@ -95,70 +95,120 @@
 
 <!-- body -->
 	<div>
-    <center><h1>General House Details</h1></center>  
+    <center><h1>Member Details</h1></center>  
 <main id="main" class="main">
+	  <section class="section">
+			<div class="card">
+			  <div class="card-body">
+			   <form class="row g-3" method="POST" action="Member_details_insert.php">
+				 <div class="col-md-3 mb-4">
+					<label for="">House Number</label>
+				   <input  name="Home_number"  placeholder="House Number" class="form-control" required>
+				 </div><br>
+				 <div class="col-md-10 mb-4">
+				   <label for="">Full Name</label>
+				   <input  name='Name'  placeholder='Full Name' class="form-control" required>
+				 </div>
+  
+				 <div class="col-md-4 mb-4">
+				   <label for="">NIC</label>
+				   <input  name='NIC' placeholder='NIC' class="form-control" required>
+				  </div>
+  
+				 <div class="col-md-4 mb-4">
+				   <label for="">DOB</label>
+				   <input type="date" name='DOB' placeholder='DOB' class="form-control" required>
+				 </div>
   
   
-  <section class="section">
-        <div class="card">
-          <div class="card-body">
-
-           <form method="POST" action="gen_det.php" class="col">
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <label class="form-label" for="form3Example3" >House Number</label>
-                  <input  name="Home_number"  placeholder="Home Number" class="form-control mb-2" required >
-                
-                  <label class="form-label" for="form3Example3" >Tax Number</label>
-                  <input type="text" class="form-control" placeholder="Tax Number" name="Tax_number">
-                </div>
-
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <label class="form-label" for="form3Example3" >Address</label>
-                  <input class="form-control" placeholder="Address" name="Address" required>
-                </div>
-
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <label class="form-label" for="form3Example3">Telephone</label>
-                  <div class="row">
-                      <div class="col">
-                        <input type="text" class="form-control mb-2" placeholder="Fixed" name="Fixed">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="Mobile" name="Mobile">
-                      </div>
-                  </div>
-                </div>
-
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <label class="form-label" for="form3Example3">Social Media</label>
-                  <div class="row">
-                      <div class="col">
-                          <input type="text" class="form-control" placeholder="WhatsApp" name="wapp">
-                      </div>
-                      <div class="col">
-                          <input type="text" class="form-control" placeholder="Telegram" name="tele">
-                      </div>
-                  </div>
-                </div>
-              
-                <div data-mdb-input-init class="form-outline mb-4">
-                  
-                  <div class="row">
-                      <div class="col">
-                        <label class="form-label" for="form3Example3">Email</label>
-                        <input type="text" class="form-control" placeholder="email" name="email">
-                      </div>
-                      <div class="col">
-                        <label class="form-label" for="form3Example3" >Number of Sub Families</label>
-                        <input type="text" class="form-control" placeholder="Input in Digits" name="sub_families">
-                      </div>
-                  </div>
-                </div>
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Submit</button>
-            </form>
-          </div>
-        </div>
-        </section>
+  
+				   <div class="col-md-4 mb-4">
+					  <label for="">Race</label>
+				   <select class="form-control" name="Race" required>
+					  <!-- option tag starts -->
+						  <option>Select</option>
+						  <option value="Sinhala">Sinhala</option>
+						  <option value="Muslim">Muslim</option>
+						  <option value="Tamil">Tamil</option>
+						  <option value="Male">Male</option>
+					  <!-- option tag ends -->
+				   </select>
+					</div>
+  
+  
+				 <div class="col-md-4 mb-4">
+				   <label for="">Relegion</label>
+				   <select class="form-control" name="Religion" required>
+					  <!-- option tag starts -->
+						  <option>Select</option>
+						  <option value="Buddhism">Buddhism</option>
+						  <option value="Islam">Islam</option>
+						  <option value="Hindu">Hindu</option>
+						  <option value="Catholic">Catholic</option>
+					  <!-- option tag ends -->
+				  </select>
+				 </div>
+  
+				 <div class="col-md-4 mb-4">
+				   <label for="">Highest Education</label>
+				   <select class="form-control" name="H_Edu_Quali" required>
+					   <!-- option tag starts -->
+						   <option>Select an option</option>
+						   <option value="Not Gained">Not Gained</option>
+						   <option value="Below OL">Below OL</option>
+						   <option value="O/L">O/L</option>
+						   <option value="O/L Pass">O/L Pass</option>
+						   <option value="A/L pass">A/L pass</option>
+						   <option value="Diploma">Diploma</option>
+						   <option value="Degree">Degree</option>
+						   <option value="Other">Other</option>
+					   <!-- option tag ends -->
+				   </select>
+				 </div>
+				 <div class="col-md-4 mb-4">
+				   <label for="">Occupation</label>
+				   <input name='Job' placeholder='Occupation' class="form-control"/>
+				 </div>
+  
+				 <div class="col-md-4 mb-4">
+				   <label for="">Gender</label>
+				   <select class="form-control" name="Gender" required>
+					  <!-- option tag starts -->
+						  <option>Select</option>
+						  <option value="Female">Female</option>
+						  <option value="Male">Male</option>
+					  <!-- option tag ends -->
+				   </select>
+				 </div>
+  
+				 <div class="col-md-4 mb-4">
+				   <label for="">Martial Status</label>
+				   <select class="form-control" name="Martial">
+					<!-- option tag starts -->
+						<option>Select</option>
+						<option value="Married">Married</option>
+						<option value="Unamrried">Unamrried</option>
+						<option value="Divorced">Divorced</option>
+					<!-- option tag ends -->
+					</select>
+				 </div>
+  
+				 <div class="col-md-4 mb-4">
+				   <label for="">Relationship to breadwinner</label>
+				   <input name='Relat_breadw' placeholder='Relationship_to_breadwinner' class="form-control" required>
+				 </div>
+				 <div class="button_submit">
+					<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 md-3" >Submit</button>
+				 </div>
+				
+				
+				
+			   </form>
+			  </div>
+			</div>
+		  </section>
+  
+  
 
 <!-- end of general house details  -->
 
