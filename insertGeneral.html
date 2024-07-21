@@ -34,18 +34,7 @@
 	<!-- Firebase SDK -->
 	<script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"></script>
-	<script>
-		import { initializeApp } from "firebase/app";
-		const firebaseConfig = {
-		apiKey: "AIzaSyA_I4WDGDYsDCUr6tNVCC9ZcfDBfJJxpA8",
-		authDomain: "family-census-details-3893d.firebaseapp.com",
-		projectId: "family-census-details-3893d",
-		storageBucket: "family-census-details-3893d.appspot.com",
-		messagingSenderId: "416034387469",
-		appId: "1:416034387469:web:5800cef9c8f2270307c744"
-		};
-		const app = initializeApp(firebaseConfig);
-	</script>
+	
 </head>
 
 
@@ -128,7 +117,7 @@
         <div class="card">
           <div class="card-body">
 
-           <form method="POST" action="gen_det.js" >
+           <form >
                 <div data-mdb-input-init class="form-outline mb-4">
                   <label class="form-label" for="form3Example3" >House Number</label>
                   <input  name="Home_number"  placeholder="Home Number" class="form-control mb-2" required >
@@ -205,6 +194,7 @@
 	<script src="js/daterangepicker.js"></script>
 
 	<script src="js/typed.js"></script>
+	
 	<script>
 		$(function() {
 			var slides = $('.slides'),
@@ -234,6 +224,8 @@
 	</script>
 
 	<script src="js/custom.js"></script>
+
+	<script src="js/gen_det.js"></script>
 
 </body>
 

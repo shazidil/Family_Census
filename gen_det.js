@@ -1,41 +1,52 @@
 // Add event listener to the form
-document.querySelector('form').addEventListener('submit', function(e) {
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+const firebaseConfig = {
+		apiKey: "AIzaSyA_I4WDGDYsDCUr6tNVCC9ZcfDBfJJxpA8",
+		authDomain: "family-census-details-3893d.firebaseapp.com",
+		projectId: "family-census-details-3893d",
+		storageBucket: "family-census-details-3893d.appspot.com",
+		messagingSenderId: "416034387469",
+		appId: "1:416034387469:web:5800cef9c8f2270307c744"
+		};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+document.getElementById('submitForm').addEventListener('click', async (e) => {
     e.preventDefault();
 
-    // Get form values
-    const homeNumber = document.querySelector('input[name="Home_number"]').value;
-    const taxNumber = document.querySelector('input[name="Tax_number"]').value;
-    const address = document.querySelector('input[name="Address"]').value;
-    const fixed = document.querySelector('input[name="Fixed"]').value;
-    const mobile = document.querySelector('input[name="Mobile"]').value;
-    const whatsapp = document.querySelector('input[name="wapp"]').value;
-    const telegram = document.querySelector('input[name="tele"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const subFamilies = document.querySelector('input[name="sub_families"]').value;
+    const form = document.getElementById('censusForm');
+    
+    const homeNumber = form.Home_number.value;
+    const taxNumber = form.Tax_number.value;
+    const address = form.Address.value;
+    const fixed = form.Fixed.value;
+    const mobile = form.Mobile.value;
+    const whatsapp = form.wapp.value;
+    const telegram = form.tele.value;
+    const email = form.email.value;
+    const subFamilies = form.sub_families.value;
 
-    // Save data to Firestore
-    db.collection("generalHouseDetails").add({
-        homeNumber: homeNumber,
-        taxNumber: taxNumber,
-        address: address,
-        telephone: {
-            fixed: fixed,
-            mobile: mobile
-        },
-        socialMedia: {
-            whatsapp: whatsapp,
-            telegram: telegram
-        },
-        email: email,
-        subFamilies: subFamilies
-    })
-    .then(() => {
+    try {
+        await addDoc(collection(db, 'generalHouseDetails'), {
+            homeNumber,
+            taxNumber,
+            address,
+            telephone: {
+                fixed,
+                mobile
+            },
+            socialMedia: {
+                whatsapp,
+                telegram
+            },
+            email,
+            subFamilies
+        });
         alert('Data successfully saved!');
-        // Clear form fields
-        document.querySelector('form').reset();
-    })
-    .catch((error) => {
+        form.reset();
+    } catch (error) {
         console.error('Error saving data: ', error);
         alert('Error saving data: ' + error.message);
-    });
+    }
 });
